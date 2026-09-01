@@ -223,6 +223,8 @@ a {
 .sidebar-right {
     order: 1;
     border-right: 3px solid #5b9bd5;
+    position: relative;
+    z-index: 101;
 }
 
 .sidebar-left {
@@ -260,10 +262,17 @@ a {
     margin-bottom: 0;
     transition: background 0.15s;
     border: none;
+    position: relative;
+    z-index: 102;
 }
 
 .sidebar-register-btn:hover {
     background: #2471a3;
+}
+
+.sidebar-register-btn:active {
+    background: #1c5f8f;
+    transform: scale(0.98);
 }
 
 .sidebar-ads {

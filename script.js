@@ -77,6 +77,21 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // ===== REGISTER BUTTON NAVIGATION =====
+    const registerBtn = document.getElementById('sidebarRegisterBtn');
+    if (registerBtn) {
+        registerBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            var target = 'register.html';
+            try {
+                window.top.location.href = target;
+            } catch (err) {
+                window.location.href = target;
+            }
+        });
+    }
+
     // ===== PASSWORD TOGGLE (registration page) =====
     const eyeBtn = document.getElementById('regEyeBtn');
     const pwInput = document.getElementById('regPassword');
