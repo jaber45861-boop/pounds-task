@@ -1,6 +1,55 @@
 // script.js — smooth scroll and basic interactions
 
 document.addEventListener('DOMContentLoaded', () => {
+    // ===== LANGUAGE SELECTOR =====
+    const globeBtn = document.getElementById('langGlobeBtn');
+    const dropdown = document.getElementById('langDropdown');
+
+    if (globeBtn && dropdown) {
+        // Click toggle
+        globeBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            dropdown.classList.toggle('open');
+        });
+
+        // Hover open on desktop
+        const langControl = document.getElementById('langControl');
+        let hoverTimeout;
+
+        langControl.addEventListener('mouseenter', () => {
+            clearTimeout(hoverTimeout);
+            dropdown.classList.add('open');
+        });
+
+        langControl.addEventListener('mouseleave', () => {
+            hoverTimeout = setTimeout(() => {
+                dropdown.classList.remove('open');
+            }, 200);
+        });
+
+        // Close on outside click
+        document.addEventListener('click', (e) => {
+            if (!langControl.contains(e.target)) {
+                dropdown.classList.remove('open');
+            }
+        });
+
+        // Close on Escape
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                dropdown.classList.remove('open');
+            }
+        });
+
+        // Prevent dropdown clicks from navigating
+        const langOptions = dropdown.querySelectorAll('.lang-option');
+        langOptions.forEach(opt => {
+            opt.addEventListener('click', (e) => {
+                e.preventDefault();
+                dropdown.classList.remove('open');
+            });
+        });
+    }
     // Smooth scroll for back-to-top
     const btt = document.getElementById('backToTop');
     if (btt) {
