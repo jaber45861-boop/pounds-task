@@ -13,7 +13,7 @@ html {
 
 body {
     font-family: 'Noto Naskh Arabic', 'Noto Kufi Arabic', 'Tahoma', 'Arial', sans-serif;
-    background: #d0d0d0;
+    background: #e8e8e8;
     color: #333;
     direction: rtl;
     text-align: right;
@@ -83,6 +83,10 @@ a {
 
 .nav-link:hover {
     background: rgba(255,255,255,0.12);
+}
+
+.nav-link.active {
+    background: #c0392b;
 }
 
 .nav-cta {
@@ -453,17 +457,17 @@ a {
 }
 
 .stat-green {
-    background: linear-gradient(135deg, #27ae60, #2ecc71);
+    background: #27ae60;
     box-shadow: 0 4px 10px rgba(39,174,96,0.25);
 }
 
 .stat-gray {
-    background: linear-gradient(135deg, #7f8c8d, #95a5a6);
+    background: #7f8c8d;
     box-shadow: 0 4px 10px rgba(127,140,141,0.25);
 }
 
 .stat-gold {
-    background: linear-gradient(135deg, #f39c12, #f1c40f);
+    background: #f39c12;
     box-shadow: 0 4px 10px rgba(243,156,18,0.25);
 }
 
