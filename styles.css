@@ -756,6 +756,324 @@ a {
 }
 
 /* ============================================
+   REGISTRATION FORM
+   ============================================ */
+.reg-section {
+    padding: 0 22px 28px;
+}
+
+.reg-form {
+    padding: 20px 30px 10px;
+}
+
+.reg-field {
+    margin-bottom: 18px;
+}
+
+.reg-field-label {
+    margin-bottom: 2px;
+}
+
+.reg-label-main {
+    font-size: 13px;
+    font-weight: 600;
+    color: #333;
+}
+
+.reg-label-sub {
+    font-size: 12px;
+    font-weight: 400;
+    color: #666;
+}
+
+.reg-field-hint {
+    font-size: 11px;
+    color: #888;
+    margin-bottom: 5px;
+    padding-right: 2px;
+}
+
+.reg-input-wrap {
+    position: relative;
+}
+
+.reg-input {
+    width: 100%;
+    padding: 9px 12px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 13px;
+    font-family: inherit;
+    color: #333;
+    background: #fff;
+    direction: ltr;
+    text-align: left;
+}
+
+.reg-input:focus {
+    outline: none;
+    border-color: #4a8ac4;
+    box-shadow: 0 0 0 2px rgba(74,138,196,0.15);
+}
+
+.reg-input-obscured {
+    background: linear-gradient(90deg, #c8a2c8 0%, #8b6f8b 30%, #4a2f6e 50%, #8b6f8b 70%, #c8a2c8 100%);
+    color: transparent;
+    text-shadow: none;
+    border-color: #999;
+}
+
+.reg-error {
+    color: #c0392b;
+    font-size: 11.5px;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+.reg-password-wrap {
+    position: relative;
+}
+
+.reg-password-wrap .reg-input {
+    padding-left: 40px;
+}
+
+.reg-eye-btn {
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.reg-eye-btn:hover svg {
+    stroke: #333;
+}
+
+.reg-invite-text {
+    font-size: 12px;
+    color: #333;
+    padding: 8px 0;
+}
+
+.reg-avatars-section {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.reg-avatars-label {
+    font-size: 12px;
+    color: #555;
+    margin-bottom: 12px;
+    direction: ltr;
+    text-align: center;
+}
+
+.reg-avatars-label-ar {
+    margin-right: 6px;
+}
+
+.reg-avatars-row {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 0 10px;
+}
+
+.reg-avatar {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border-color 0.15s, transform 0.15s;
+    position: relative;
+}
+
+.reg-avatar:hover {
+    border-color: #4a8ac4;
+    transform: scale(1.08);
+}
+
+.reg-avatar-inner {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.reg-terms {
+    padding: 10px 0;
+}
+
+.reg-terms-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    cursor: pointer;
+    font-size: 11.5px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.reg-checkbox {
+    margin-top: 3px;
+    flex-shrink: 0;
+    width: 15px;
+    height: 15px;
+}
+
+.reg-terms-text {
+    direction: ltr;
+    text-align: left;
+}
+
+.reg-captcha-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.reg-captcha-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 300px;
+    max-width: 100%;
+    padding: 12px 16px;
+    background: #f9f9f9;
+    border: 1px solid #d3d3d3;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+.reg-captcha-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #333;
+    font-weight: 500;
+}
+
+.reg-captcha-checkbox {
+    width: 22px;
+    height: 22px;
+    border: 2px solid #c1c1c1;
+    border-radius: 3px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.reg-captcha-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+}
+
+.reg-captcha-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.reg-captcha-name {
+    font-size: 10px;
+    color: #555;
+    font-weight: 500;
+}
+
+.reg-captcha-links {
+    font-size: 10px;
+    color: #888;
+    margin-top: 4px;
+}
+
+.reg-captcha-links a {
+    color: #888;
+    text-decoration: none;
+}
+
+.reg-captcha-links a:hover {
+    text-decoration: underline;
+}
+
+.reg-submit-section {
+    text-align: center;
+    padding: 15px 0 20px;
+}
+
+.reg-submit-btn {
+    padding: 10px 40px;
+    background: #2980b9;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: inherit;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+.reg-submit-btn:hover {
+    background: #2471a3;
+}
+
+/* ============================================
+   LEFT SIDEBAR - REGISTRATION PAGE STATS
+   ============================================ */
+.sidebar-left-registration .sidebar-left-stats {
+    padding: 12px 10px 0;
+}
+
+.stat-line {
+    margin-bottom: 4px;
+}
+
+.stat-label {
+    font-size: 11px;
+    color: #555;
+    font-weight: 500;
+}
+
+.stat-value-inline {
+    font-size: 11px;
+    color: #333;
+    font-weight: 500;
+    margin-right: 4px;
+}
+
+.stat-big {
+    margin-bottom: 10px;
+}
+
+.stat-value-big {
+    font-size: 16px;
+    font-weight: 700;
+    color: #2980b9;
+    direction: ltr;
+    display: inline-block;
+}
+
+.stat-sub {
+    font-size: 10px;
+    color: #777;
+    margin-right: 4px;
+    font-weight: 400;
+}
+
+/* ============================================
    SCROLLBAR
    ============================================ */
 ::-webkit-scrollbar {

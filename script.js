@@ -76,4 +76,23 @@ document.addEventListener('DOMContentLoaded', () => {
             link.classList.add('active');
         });
     });
+
+    // ===== PASSWORD TOGGLE (registration page) =====
+    const eyeBtn = document.getElementById('regEyeBtn');
+    const pwInput = document.getElementById('regPassword');
+    if (eyeBtn && pwInput) {
+        eyeBtn.addEventListener('click', () => {
+            const isPassword = pwInput.type === 'password';
+            pwInput.type = isPassword ? 'text' : 'password';
+        });
+    }
+
+    // ===== AVATAR SELECTION =====
+    const avatars = document.querySelectorAll('.reg-avatar');
+    avatars.forEach(av => {
+        av.addEventListener('click', () => {
+            avatars.forEach(a => a.style.borderColor = 'transparent');
+            av.style.borderColor = '#4a8ac4';
+        });
+    });
 });
